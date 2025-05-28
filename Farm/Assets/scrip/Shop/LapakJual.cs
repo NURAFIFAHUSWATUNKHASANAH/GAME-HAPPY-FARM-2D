@@ -8,7 +8,8 @@ public class LapakJual : MonoBehaviour
     {
         if (other.CompareTag("Player") && !sudahTerjual)
         {
-            ShopManager.Instance.JualSemuaBarang();
+            ShopManager.Instance.JualSemuaBarang(); // Sudah ada notifikasi di dalam sini
+            NotificationManager.Instance.TampilkanNotifikasi("Menjual semua panen..."); // (opsional, notifikasi tambahan)
             sudahTerjual = true;
         }
     }
